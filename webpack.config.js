@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack"); /* Needed for jquery */
 
 module.exports = {
+	entry: ['./src/js/index.js', './src/scss/index.scss'], 
   module: {
     rules: [
       {
@@ -26,14 +27,16 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
 	  {
-            test: /\.scss$/,
-            use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader" // translates CSS into CommonJS
-            }, {
-                loader: "sass-loader" // compiles Sass to CSS
-            }]
+            test: /\.(scss)$/,
+    use: [{
+      loader: 'style-loader', // inject CSS to page
+    }, {
+      loader: 'css-loader', // translates CSS into CommonJS modules
+    }, {
+      loader: 'postcss-loader', // Run post css actions
+    }, {
+      loader: 'sass-loader' // compiles Sass to CSS
+    }]
 	  },
 	  {
         test: /\.(js|jsx|html)$/,

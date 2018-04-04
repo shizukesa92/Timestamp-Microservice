@@ -27,10 +27,6 @@ module.exports = {
 	        "react-redux/connect-prefer-named-arguments": 2,
 			"import/named": 2
     },
-	"ecmaFeatures": {
-    "jsx": true,
-    "experimentalObjectRestSpread": true
-  },
 	"extends": [
 	        "plugin:react-redux/recommended",
 			  "plugin:react/recommended",
