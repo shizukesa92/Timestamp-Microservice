@@ -53,34 +53,9 @@ h3 {
 		width: 100vw;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-}
-
-
-.tooltip {
-		position: absolute;
-		width: auto;
-		height: auto;
-		padding: 0.5%;
-		background-color: white;
-		pointer-events: none;
-		background-color: grey;
-		color: white;
 }
 
 
 
-.tooltip {
-		position: absolute;
-		width: auto;
-		height: auto;
-		padding: 0.5%;
-		background-color: black;
-		pointer-events: none;
-		color: white;
-}
 
-line {
-		stroke: black;
-		stroke-opacity: 0.6;
-}
+
