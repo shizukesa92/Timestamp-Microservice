@@ -1,14 +1,16 @@
 const express = require("express");
 const app = express();
 const http = require("http");
-
+const path = require('path');
 const api = require("./routes/api");
 
-app.use(express.static("dist"));
 app.use("/api/v1", api);
 app.use("/api/", api);
 app.use("/", api);
-app.set("view engine", "pug");
+app.get('/', function(req, res) {
+	res.sendFile(path.join(__dirname + '/src/index.html'));
+});
+
 
 
 app.listen(3000, () => console.log("Example app listening on port 3000!"));

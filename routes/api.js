@@ -1,15 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const timestamp = require("./timestamp");
+const path = require('path');
+
 router.route("/timestamp/api/v1/:query").get(timestamp.parse);
 router.route("/timestamp/api/:query").get(timestamp.parse);
 router.route("/timestamp/:query").get(timestamp.parse);
-// If it's not an api request, display the index page (found in frontend)
 router.get("*", (req, res) => {
 	const fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl;
-	res.render("index.html", {
-		fullUrl: fullUrl,
-		title: "Timestamp Microservice"
-	});
+	res.sendFile(path.join(__dirname, '../src', 'index.html'));
 });
 module.exports = router;
