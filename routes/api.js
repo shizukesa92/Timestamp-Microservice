@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const timestamp = require(".timestamp");
+const timestamp = require("./timestamp");
 router.route("/timestamp/api/v1/:query").get(timestamp.parse);
 router.route("/timestamp/api/:query").get(timestamp.parse);
 router.route("/timestamp/:query").get(timestamp.parse);
