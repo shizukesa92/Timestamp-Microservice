@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-	"heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
+	"heroku-postbuild": "webpack-dev-server -p --config ./webpack.config.js --progress",
     "build": "webpack --mode production"
   },
   "dependencies": {
