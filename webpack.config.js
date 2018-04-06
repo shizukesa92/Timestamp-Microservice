@@ -49,6 +49,7 @@ proxy: {
         loader: "eslint-loader",
         options: {
           emitWarning: true,
+		  quiet: true
         }
       }
     ]

@@ -1,7 +1,7 @@
 const moment = require("moment");
 
 module.exports = {
-	parse: function(req, res) {
+	parse: (req, res) => {
 		const date = req.params.query;
 		let processedDate = {
 			"unix": null,
