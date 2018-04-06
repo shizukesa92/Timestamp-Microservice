@@ -10,10 +10,16 @@ module.exports = {
 		if (+date >= 0) {
 			processedDate.unix = +date;
 			processedDate.utc = new Date(+date).toUTCString();
-		}
+		} else
 		if (isNaN(+date) && moment(date, "MMMM D, YYYY").isValid()) {
 			processedDate.unix = moment(date, "MMMM D, YYYY").format("X");
 			processedDate.utc = new Date(date).toUTCString();
+		} else if (date = "") {
+			processedDate.unix = new Date();
+			processedDate.utc = new Date().toUTCString();
+		} else {
+			processedDate.unix = null;
+			processedDate.utc = "Invalid date";
 		}
 		res.send(processedDate);
 	}
