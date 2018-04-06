@@ -9,7 +9,6 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
-  "proxy": "http://localhost:3000",
   "dependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",

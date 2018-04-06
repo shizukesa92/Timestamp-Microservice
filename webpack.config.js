@@ -4,6 +4,11 @@ const webpack = require("webpack"); /* Needed for jquery */
 
 module.exports = {
 	entry: ['./src/js/index.js', './src/scss/main.scss'], 
+	devServer: {
+proxy: {
+  "/api": "http://localhost:3000"
+}
+  },
   module: {
     rules: [
       {
@@ -48,6 +53,7 @@ module.exports = {
       }
     ]
   },
+  
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
