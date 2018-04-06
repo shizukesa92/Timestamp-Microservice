@@ -4,6 +4,7 @@ const http = require("http");
 const path = require("path");
 const api = require("./routes/api");
 
+
 app.use("/api/v1", api);
 app.use("/api/", api);
 app.use("/", api);

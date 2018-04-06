@@ -1,6 +1,11 @@
 {
   "name": "Timestamp-Microservice",
   "version": "1.0.0",
+    "engines": {
+    "node": "9.7.1",
+	"npm": "5.8.0",
+	"yarn": "1.5.1"
+  },
   "main": "index.js",
   "repository": "https://github.com/shizukesa92/Timestamp-Microservice.git",
   "author": "Leonard Tye <leonardtye1992@gmail.com>",
