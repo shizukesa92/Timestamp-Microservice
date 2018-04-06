@@ -48,8 +48,7 @@ proxy: {
         exclude: /node_modules/,
         loader: "eslint-loader",
         options: {
-          emitWarning: true,
-		  quiet: true
+          emitWarning: true
         }
       }
     ]
