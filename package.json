@@ -11,7 +11,7 @@
   "author": "Leonard Tye <leonardtye1992@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+	"start": "webpack-dev-server --mode development --open && node app.js",
 	"heroku-postbuild": "webpack-dev-server -p --config ./webpack.config.js --progress",
     "build": "webpack --mode production"
   },
