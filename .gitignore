@@ -1,0 +1,6 @@
+.DS_Store
+*~
+*.swp
+Thumbs.db
+tags
+node_modules
