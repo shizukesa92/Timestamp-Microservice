@@ -9,6 +9,6 @@ router.route("/timestamp/").get(timestampv2.parse);
 
 router.get("*", (req, res) => {
 	res.status(200).send(req.protocol + '://' + req.get("host"));
-	//res.sendFile(path.join(__dirname, "../src", req.originalUrl));
+	//res.sendFile(path.join(__dirname, "../dist", req.originalUrl));
 });
 module.exports = router;
