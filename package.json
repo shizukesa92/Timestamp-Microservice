@@ -11,8 +11,10 @@
   "author": "Leonard Tye <leonardtye1992@gmail.com>",
   "license": "MIT",
   "scripts": {
-	"start": "webpack-dev-server --mode development --open && node app.js",
-    "build": "webpack --mode production"
+	"start": "node app.js",
+	"dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+	  "postinstall": "webpack -p --config ./webpack.config.js --progress"
   },
   "dependencies": {
     "autoprefixer": "^8.2.0",
