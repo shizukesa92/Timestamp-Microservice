@@ -11,7 +11,7 @@
   "author": "Leonard Tye <leonardtye1992@gmail.com>",
   "license": "MIT",
   "scripts": {
-	"start": "node app.js",
+	"start": "node app.js && ./node_modules/webpack/bin/webpack.js -p --progress",
 	"dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
 	  "postinstall": "webpack -p --config ./webpack.config.js --progress"
