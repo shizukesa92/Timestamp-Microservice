@@ -6,6 +6,8 @@ const api = require("./routes/api");
 
 
 app.use("/api/", api);
+app.use(express.static(path.resolve("./dist")));
+
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/dist/index.html"));
 });
